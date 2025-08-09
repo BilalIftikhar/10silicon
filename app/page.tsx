@@ -130,10 +130,10 @@ export default function HomePage() {
                       <h3 className="text-3xl font-black text-black mb-6 leading-tight">WEB<br />DEVELOPMENT</h3>
                       <p className="text-gray-600 leading-relaxed text-lg">Modern, responsive websites built with cutting-edge technologies and frameworks.</p>
                     </div>
-                    <div className="flex items-center text-black font-bold group-hover:translate-x-4 transition-transform duration-300">
+                    {/* <div className="flex items-center text-black font-bold group-hover:translate-x-4 transition-transform duration-300">
                       <span className="text-lg">EXPLORE</span>
                       <ArrowUpRight className="ml-3 h-6 w-6" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -156,10 +156,10 @@ export default function HomePage() {
                       <h3 className="text-3xl font-black text-black mb-6 leading-tight">AI<br />SOLUTIONS</h3>
                       <p className="text-black/80 leading-relaxed text-lg">Intelligent applications powered by machine learning and artificial intelligence.</p>
                     </div>
-                    <div className="flex items-center text-black font-bold group-hover:translate-x-4 transition-transform duration-300">
+                    {/* <div className="flex items-center text-black font-bold group-hover:translate-x-4 transition-transform duration-300">
                       <span className="text-lg">EXPLORE</span>
                       <ArrowUpRight className="ml-3 h-6 w-6" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -182,10 +182,10 @@ export default function HomePage() {
                       <h3 className="text-3xl font-black text-black mb-6 leading-tight">UI/UX<br />DESIGN</h3>
                       <p className="text-gray-600 leading-relaxed text-lg">User-centered design that creates engaging and memorable experiences.</p>
                     </div>
-                    <div className="flex items-center text-black font-bold group-hover:translate-x-4 transition-transform duration-300">
+                    {/* <div className="flex items-center text-black font-bold group-hover:translate-x-4 transition-transform duration-300">
                       <span className="text-lg">EXPLORE</span>
                       <ArrowUpRight className="ml-3 h-6 w-6" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

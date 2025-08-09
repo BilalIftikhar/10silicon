@@ -30,7 +30,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'EMAIL',
-      value: 'bilaliftikhar431@gmail.com',
+      value: 'hello@10silicon.com',
       description: 'Drop us a line anytime'
     },
     {
@@ -125,7 +125,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
                           placeholder="John Doe"
-                          className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0"
+                          className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0 bg-white"
                         />
                       </div>
                       <div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
                           placeholder="john@example.com"
-                          className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0"
+                          className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0 bg-white"
                         />
                       </div>
                     </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={(e) => handleInputChange('company', e.target.value)}
                         placeholder="Your Company"
-                        className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0"
+                        className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0 bg-white"
                       />
                     </div>
 
@@ -163,10 +163,10 @@ export default function ContactPage() {
                         Inquiry Type
                       </label>
                       <Select onValueChange={(value) => handleInputChange('inquiryType', value)}>
-                        <SelectTrigger className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0">
+                        <SelectTrigger className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0 bg-white">
                           <SelectValue placeholder="Select inquiry type" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className='bg-gray-800 text-white '>
                           <SelectItem value="project">New Project</SelectItem>
                           <SelectItem value="consultation">Free Consultation</SelectItem>
                           <SelectItem value="support">Technical Support</SelectItem>
@@ -187,13 +187,13 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         placeholder="Tell us about your project, goals, and any specific requirements..."
-                        className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0 resize-none"
+                        className="border-2 border-gray-200 rounded-xl px-4 py-4 text-black font-medium focus:border-yellow-400 focus:ring-0 bg-white resize-none"
                       />
                     </div>
 
                     <Button 
                       type="submit" 
-                      className="w-full bg-black text-white px-10 py-6 rounded-xl font-black text-lg hover:scale-105 transition-transform duration-300 group tracking-wider"
+                      className="w-full bg-black text-white px-10 py-6 hover:bg-black hover:text-white rounded-xl font-black text-lg hover:scale-105 transition-transform duration-300 group tracking-wider"
                     >
                       <span className="flex items-center justify-center">
                         SEND MESSAGE
@@ -253,7 +253,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="text-center">
+              {/* <div className="text-center">
                 <Link 
                   href="/services"
                   className="inline-flex items-center bg-white text-black px-8 py-4 rounded-full font-black text-lg hover:scale-105 transition-transform duration-300 group tracking-wider border-2 border-white hover:bg-black hover:text-white"
@@ -262,7 +262,7 @@ export default function ContactPage() {
                   SCHEDULE A CALL
                   <ArrowUpRight className="ml-3 h-6 w-6 group-hover:rotate-45 transition-transform duration-300" />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

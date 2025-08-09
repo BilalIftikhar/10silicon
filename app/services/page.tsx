@@ -108,7 +108,7 @@ export default function ServicesPage() {
     <main className="pt-20 bg-black overflow-hidden">
       {/* Hero Section with Massive Circle */}
       <section className="py-32 bg-black relative overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="w-[120vw] h-[120vw] max-w-[1200px] max-h-[1200px] bg-yellow-400 rounded-full flex items-center justify-center">
             <div className="text-center">
               <div className="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
@@ -118,7 +118,7 @@ export default function ServicesPage() {
               <p className="text-black/80 font-bold text-lg">SERVICES</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
           <div className="text-center">

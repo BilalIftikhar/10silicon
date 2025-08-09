@@ -24,7 +24,7 @@ export default function Footer() {
               Contact
             </h3>
             <div className="space-y-3 text-white/70">
-              <p>bilaliftikhar431@gmail.com</p>
+              <p>hello@10silicon.com</p>
               <p>+92 324 7203309</p>
               <p>Lahore, Pakistan</p>
             </div>
@@ -44,15 +44,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-white/50 text-sm">
-            © 2024 10Silicon. All rights reserved.
+            © 2025 10Silicon. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/* <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white/50 hover:text-yellow-400 transition-colors text-sm">Privacy</a>
             <a href="#" className="text-white/50 hover:text-yellow-400 transition-colors text-sm">Terms</a>
             <a href="#" className="text-white/50 hover:text-yellow-400 transition-colors text-sm">Cookies</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

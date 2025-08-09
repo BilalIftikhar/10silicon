@@ -43,25 +43,25 @@ const teamMembers = [
 
 const values = [
   {
-    icon: <Target className="h-12 w-12 text-black" />,
+    icon: <Target className="h-12 w-12 text-white" />,
     title: 'INNOVATION FIRST',
     description: 'We stay ahead of technology trends to deliver cutting-edge solutions that give our clients a competitive advantage.',
     number: '01'
   },
   {
-    icon: <Users className="h-12 w-12 text-black" />,
+    icon: <Users className="h-12 w-12 text-white" />,
     title: 'CLIENT-CENTRIC',
     description: 'Every project is tailored to our clients\' unique needs, ensuring maximum value and satisfaction.',
     number: '02'
   },
   {
-    icon: <Lightbulb className="h-12 w-12 text-black" />,
+    icon: <Lightbulb className="h-12 w-12 text-white" />,
     title: 'CREATIVE EXCELLENCE',
     description: 'We combine technical expertise with creative thinking to solve complex problems elegantly.',
     number: '03'
   },
   {
-    icon: <Award className="h-12 w-12 text-black" />,
+    icon: <Award className="h-12 w-12 text-white" />,
     title: 'QUALITY COMMITMENT',
     description: 'We maintain the highest standards in code quality, security, and performance across all projects.',
     number: '04'
@@ -124,6 +124,48 @@ export default function AboutPage() {
         </div>
       </section>
 
+       {/* Mission & Vision Section */}
+       <section className="py-32 bg-black relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 transform translate-x-1/3 -translate-y-1/2">
+          <div className="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-yellow-400/10 rounded-full"></div>
+        </div>
+
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Mission */}
+            <div className="relative bg-white rounded-3xl p-12 hover:scale-[1.02] transition-transform duration-500">
+              <div className="absolute top-6 right-6 text-8xl font-black text-yellow-400/20">M</div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-black text-black mb-8 leading-tight">OUR MISSION</h2>
+                <div className="space-y-6 text-gray-600 leading-relaxed">
+                  <p>
+                    To empower businesses worldwide with high-quality, cost-effective software solutions by leveraging our 
+                    team of skilled professionals. We bridge the gap between ideas and execution, delivering reliable 
+                    outsourced development services at competitive prices.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Vision */}
+            <div className="relative bg-white rounded-3xl p-12 hover:scale-[1.02] transition-transform duration-500">
+              <div className="absolute top-6 right-6 text-8xl font-black text-yellow-400/20">V</div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-400 rounded-full translate-y-16 -translate-x-16"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-black text-black mb-8 leading-tight">OUR VISION</h2>
+                <div className="space-y-6 text-gray-600 leading-relaxed">
+                  <p>
+                    To become the most trusted outsourcing partner for startups and enterprises by combining technical 
+                    excellence with transparent collaboration—helping clients scale without compromising on quality or budget.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Story */}
       <section className="py-32 bg-black relative overflow-hidden">
         <div className="absolute left-0 top-1/2 transform -translate-x-1/3 -translate-y-1/2">
@@ -140,7 +182,7 @@ export default function AboutPage() {
                   <h2 className="text-4xl font-black text-black mb-8 leading-tight">OUR STORY</h2>
                   <div className="space-y-6 text-gray-600 leading-relaxed">
                     <p>
-                      Founded in 2019, 10Silicon emerged from a simple belief: that every business 
+                      Founded in 2025, 10Silicon emerged from a simple belief: that every business 
                       deserves access to world-class digital solutions. What started as a small team of 
                       passionate developers has grown into a full-service digital agency.
                     </p>
@@ -168,6 +210,69 @@ export default function AboutPage() {
                 From humble beginnings to industry recognition, our journey has been driven by passion, 
                 innovation, and an unwavering commitment to excellence.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-32 bg-black relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 transform translate-x-1/3 -translate-y-1/2">
+          <div className="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-yellow-400/10 rounded-full"></div>
+        </div>
+
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div>
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-8 leading-none tracking-tight">
+                WHY CHOOSE<br />
+                OUR TEAM
+              </h2>
+              <div className="w-24 h-1 bg-yellow-400 mb-8"></div>
+              <ul className="space-y-6 text-xl text-white/70 leading-relaxed">
+                <li className="flex items-start">
+                  <Star className="h-6 w-6 text-yellow-400 mr-4 mt-1 flex-shrink-0" />
+                  <span>150+ projects delivered successfully</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="h-6 w-6 text-yellow-400 mr-4 mt-1 flex-shrink-0" />
+                  <span>Rigorously vetted developers with 5+ years experience</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="h-6 w-6 text-yellow-400 mr-4 mt-1 flex-shrink-0" />
+                  <span>Flexible engagement models (hourly, project-based, or dedicated teams)</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="h-6 w-6 text-yellow-400 mr-4 mt-1 flex-shrink-0" />
+                  <span>Western-quality work at competitive rates</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="relative bg-white rounded-3xl p-12 hover:scale-[1.01] transition-transform duration-500">
+                <div className="absolute top-6 right-6 text-8xl font-black text-yellow-400/20">A</div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-yellow-400 rounded-full translate-y-16 translate-x-16"></div>
+                <div className="relative z-10">
+                  <h2 className="text-4xl font-black text-black mb-8 leading-tight">ABOUT 10SILICON</h2>
+                  <div className="space-y-6 text-gray-600 leading-relaxed">
+                    <p>
+                      10Silicon is a dynamic software agency specializing in outsourced development for businesses globally. 
+                      While we're a growing startup, our team comprises highly skilled designers and developers with expertise 
+                      across modern technologies.
+                    </p>
+                    <p>
+                      We partner with companies to handle their projects end-to-end—from concept to deployment—offering 
+                      cost-effective solutions without sacrificing quality. Our dedicated professionals (UI/UX designers, 
+                      full-stack developers, QA engineers) work with transparent workflows and regular updates.
+                    </p>
+                    <p>
+                      Whether you're a startup seeking to build an MVP or an enterprise needing extra bandwidth, we provide 
+                      reliable outsourcing with a focus on security, performance, and timely delivery at reasonable prices.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -216,7 +321,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-32 bg-black relative overflow-hidden">
+      {/* <section className="py-32 bg-black relative overflow-hidden">
         <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
           <div className="w-[100vw] h-[100vw] max-w-[1000px] max-h-[1000px] bg-yellow-400/5 rounded-full"></div>
         </div>
@@ -276,7 +381,7 @@ export default function AboutPage() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-32 bg-black relative overflow-hidden">
