@@ -30,7 +30,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'EMAIL',
-      value: 'hello@10silicon.com',
+      value: 'contact@10silicon.com',
       description: 'Drop us a line anytime'
     },
     {

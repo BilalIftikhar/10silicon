@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { ExternalLink, Github, Filter, ArrowUpRight, Star, Code, Brain, Palette, Database, Cloud, Shield, Smartphone, GraduationCap, ShoppingCart } from 'lucide-react'
+import { ExternalLink, Github, Filter, ArrowUpRight, Star, Code, Brain, Palette, Database, Cloud, Shield, Smartphone, GraduationCap, ShoppingCart, X } from 'lucide-react'
 import { demoUrls, githubUrls } from '@/components/project-links'
 
 const projects = [
@@ -179,20 +179,196 @@ const projects = [
     liveUrl: demoUrls['vr-training-platform'],
     githubUrl: githubUrls['vr-training-platform'],
     featured: false
-  }
+  },
+  {
+    id: 10,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/1.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMS53ZWJwIiwiaWF0IjoxNzU0ODQ3MzUyLCJleHAiOjQ5MDg0NDczNTJ9.D_FiZpaAKh-pRixL0Kxr2zm6PT0IFz00rA6GXxUT-gQ',
+    title: 'Lahore Qalander - PSL Creicket Team',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 11,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/10.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMTAud2VicCIsImlhdCI6MTc1NDg0Nzc5MCwiZXhwIjoxNzg2MzgzNzkwfQ.JRnnS0GQBkV0S8lFTw65mTsnoz-HJJXaSfPvypDBPVY',
+    title: 'LORRYZ - DISRUPTING THE FREIGHT INDUSTRY DIGITALLY',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 12,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/11.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMTEucG5nIiwiaWF0IjoxNzU0ODQ3ODIwLCJleHAiOjE3ODYzODM4MjB9.u7Gj-Yjc7qY8sXLOwYRsPneveyBvZkVKTPE3DTPE_KQ',
+    title: 'PACHEM Global Pvt. Ltd',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 13,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/12.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMTIud2VicCIsImlhdCI6MTc1NDg0NzgzNiwiZXhwIjoxNzg2MzgzODM2fQ.JFYqeRGaYvqCuN6U6RqdFFjGpD8naWT1nJZe3Rdfngw',
+    title: 'UkWild',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 14,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/13.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMTMucG5nIiwiaWF0IjoxNzU0ODQ3ODUwLCJleHAiOjE3ODYzODM4NTB9.L7cDEufv2lugPVUMjHTJYCudP2Vs8mwIknrLfp-H1HY',
+    title: 'Harris Security Services - UK',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 15,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/14.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMTQud2VicCIsImlhdCI6MTc1NDg0Nzg2MiwiZXhwIjoxNzg2MzgzODYyfQ.DapUtCcpxruLf3d3DGtDICjtzLv_znJMQ-ef_izC8Bc',
+    title: 'Shura Bridge',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 17,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/3.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvMy5wbmciLCJpYXQiOjE3NTQ4NDc4OTcsImV4cCI6MTc4NjM4Mzg5N30.0YWj9c1CYav1ai9XUMh1Aa2e5o9JS9ZHj13B8CGJf7A',
+    title: 'Bislar',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 18,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/4.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvNC53ZWJwIiwiaWF0IjoxNzU0ODQ3OTA5LCJleHAiOjE3ODYzODM5MDl9.p5nN9Zyw2-pncECjTWCoZtKYeEX3Qccs2o_88aGGGsg',
+    title: 'Tech Stuff',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 19,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/5.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvNS5wbmciLCJpYXQiOjE3NTQ4NDc5MjIsImV4cCI6MTc4NjM4MzkyMn0.LugipTJMLBBOCjBGJFl2x3Uyty72egEAWMjjaIF1K6k',
+    title: 'Movenpick',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 21,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/7.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvNy53ZWJwIiwiaWF0IjoxNzU0ODQ3OTQ0LCJleHAiOjE3ODYzODM5NDR9.dVobUyxP38Y-32TAketOG9RHwQ0SG7VUbxFe3UuvYy4',
+    title: 'Smart Workforce',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 22,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/8.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvOC5wbmciLCJpYXQiOjE3NTQ4NDc5NTUsImV4cCI6MTc4NjM4Mzk1NX0.e3-2o5N5omVtbZq-4BB8IF7CRhVO65TRywXV7b8nA2Y',
+    title: 'Eagna Technologies ',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
+  {
+    id: 23,
+    image: 'https://dincgyzuaahqhmyovwrm.supabase.co/storage/v1/object/sign/10silicon/projects/9.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jODcwOTZlZi04NGMyLTQ1MmUtYmY3MS1iNjE1ODZlZTUzMGEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiIxMHNpbGljb24vcHJvamVjdHMvOS5wbmciLCJpYXQiOjE3NTQ4NDc5NjUsImV4cCI6MTc4NjM4Mzk2NX0.RWemZO_a8sV4VxDgOPuI_oK9PoAudg5aTKO4E6rDels',
+    title: 'KingWood Services',
+    category: 'Web Design',
+    technologies: ['Unity', 'C#', 'WebXR', 'Node.js', 'Three.js'],
+    icon: Cloud,
+    color: 'from-violet-100 to-purple-100',
+    iconBg: 'bg-violet-600',
+    liveUrl: demoUrls['vr-training-platform'],
+    githubUrl: githubUrls['vr-training-platform'],
+    featured: false
+  },
 ]
 
-const categories = ['All', 'E-commerce', 'Healthcare', 'Analytics', 'Fintech', 'Education', 'Retail']
+const categories = ['All', 'E-commerce', 'Healthcare', 'Analytics', 'Fintech', 'Education', 'Retail', 'Web Design']
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false)
+  const [modalImage, setModalImage] = useState<string | null>(null)
+  const [zoom, setZoom] = useState(1)
+  const [offset, setOffset] = useState({ x: 0, y: 0 })
+  const [dragging, setDragging] = useState(false)
+  const dragStart = useRef({ x: 0, y: 0 })
 
   const filteredProjects = projects.filter(project => {
     const categoryMatch = selectedCategory === 'All' || project.category === selectedCategory
     const featuredMatch = !showFeaturedOnly || project.featured
     return categoryMatch && featuredMatch
   })
+
+  const isImageOnlyCategory = selectedCategory === 'UI/UX' || selectedCategory === 'Web Design'
+
+    // Lock/unlock scroll when modalImage changes
+  useEffect(() => {
+    if (modalImage) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+      setZoom(1)
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [modalImage])
 
   return (
     <main className="pt-20 bg-black min-h-screen overflow-hidden">
@@ -266,12 +442,13 @@ export default function PortfolioPage() {
         </div>
 
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+           {!isImageOnlyCategory ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => {
               const IconComponent = project.icon
               return (
-                <div key={project.id} className={`fade-in-element opacity-0 animation-delay-${Math.min((index + 1) * 200, 1000)}`}>
-                  <div className="group cursor-pointer h-[600px]">
+                <div key={project.id} className={`animation-delay-${Math.min((index + 1) * 200, 1000)}`}>
+                  <div className="group cursor-pointer h-[700px]">
                     <div className="relative bg-white rounded-3xl overflow-hidden hover:scale-105 transition-all duration-700 hover:rotate-1 h-full">
                       {/* Project Visual */}
                       <div className={`h-80 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
@@ -316,14 +493,14 @@ export default function PortfolioPage() {
                         </div>
                         
                         <div>
-                          <div className="grid grid-cols-3 gap-4 mb-6">
+                          {/* <div className="grid grid-cols-3 gap-4 mb-6">
                             {Object.entries(project.metrics).map(([key, value]) => (
                               <div key={key} className="text-center">
                                 <div className="text-lg font-black text-black">{value}</div>
                                 <div className="text-xs text-gray-500 uppercase tracking-wider">{key}</div>
                               </div>
                             ))}
-                          </div>
+                          </div> */}
                           
                           <div className="flex space-x-3">
                             <Link 
@@ -333,13 +510,13 @@ export default function PortfolioPage() {
                               <ExternalLink className="h-4 w-4 mr-2" />
                               LIVE
                             </Link>
-                            <Link 
+                            {/* <Link 
                               href={project.githubUrl}
                               className="flex-1 border-2 border-gray-200 text-black px-4 py-3 rounded-xl font-bold text-center hover:border-gray-400 transition-colors flex items-center justify-center"
                             >
                               <Github className="h-4 w-4 mr-2" />
                               CODE
-                            </Link>
+                            </Link> */}
                           </div>
                         </div>
                       </div>
@@ -349,6 +526,28 @@ export default function PortfolioPage() {
               )
             })}
           </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {filteredProjects.map((project) => (
+                <div key={project.id} className="cursor-pointer group relative">
+                  <Image
+                    src={project.image ?? ''}
+                    alt={project.title}
+                    width={600}
+                    height={400}
+                    className="rounded-3xl object-cover w-full h-72 group-hover:scale-105 transition-transform duration-300"
+                    onClick={() => setModalImage(project.image ?? null)}
+                  />
+                  <div className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {project.title}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Modal for image preview */}
+          
           
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
@@ -423,6 +622,87 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+      {modalImage && (
+    <div className="fixed inset-0 bg-black/90 z-[9999] flex items-start justify-center overflow-y-auto">
+      <div className="relative w-full h-full flex flex-col items-center justify-start select-none">
+        <div
+          style={{
+            cursor: dragging ? 'grabbing' : zoom > 1 ? 'grab' : 'default',
+            overflow: 'hidden',
+            width: '100%',
+            height: '90vh',
+            position: 'relative',
+          }}
+          onMouseDown={e => {
+            if (zoom > 1) {
+              setDragging(true)
+              dragStart.current = { x: e.clientX - offset.x, y: e.clientY - offset.y }
+            }
+          }}
+          onMouseUp={() => setDragging(false)}
+          onMouseLeave={() => setDragging(false)}
+          onMouseMove={e => {
+            if (dragging && zoom > 1) {
+              setOffset({
+                x: e.clientX - dragStart.current.x,
+                y: e.clientY - dragStart.current.y,
+              })
+            }
+          }}
+        >
+          <Image
+            src={modalImage}
+            alt="Preview"
+            width={1200}
+            height={900}
+            style={{
+              transform: `scale(${zoom}) translate(${offset.x / zoom}px, ${offset.y / zoom}px)`,
+              transition: dragging ? 'none' : 'transform 0.3s',
+              cursor: dragging ? 'grabbing' : zoom > 1 ? 'grab' : 'default',
+              maxWidth: '100%',
+              maxHeight: '90vh',
+              userSelect: 'none',
+              pointerEvents: 'auto',
+            }}
+            className="rounded-2xl object-contain mx-auto"
+            draggable={false}
+          />
+        </div>
+        {/* Zoom Controls */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
+          <button
+            onClick={() => {
+              setZoom(z => Math.max(1, z - 0.2))
+              setOffset({ x: 0, y: 0 })
+            }}
+            className="bg-yellow-400 text-black rounded-full p-3 font-black text-xl shadow-lg"
+            aria-label="Zoom Out"
+          >
+            -
+          </button>
+          <button
+            onClick={() => setZoom(z => Math.min(3, z + 0.2))}
+            className="bg-yellow-400 text-black rounded-full p-3 font-black text-xl shadow-lg"
+            aria-label="Zoom In"
+          >
+            +
+          </button>
+        </div>
+        {/* Close Button */}
+        <button
+          onClick={() => {
+            setModalImage(null)
+            setZoom(1)
+            setOffset({ x: 0, y: 0 })
+          }}
+          className="absolute top-8 right-8 bg-yellow-400 text-black rounded-full p-3 shadow-lg"
+          aria-label="Close"
+        >
+          <X className="h-6 w-6" />
+        </button>
+      </div>
+    </div>
+  )}
     </main>
   )
 }

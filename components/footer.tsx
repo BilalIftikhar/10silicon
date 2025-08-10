@@ -24,7 +24,7 @@ export default function Footer() {
               Contact
             </h3>
             <div className="space-y-3 text-white/70">
-              <p>hello@10silicon.com</p>
+              <p>contact@10silicon.com</p>
               <p>+92 324 7203309</p>
               <p>Lahore, Pakistan</p>
             </div>
