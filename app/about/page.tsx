@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, Award, Users, Target, Lightbulb, Code, Brain, Palette, Database, Star } from 'lucide-react'
 
