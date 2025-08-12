@@ -86,24 +86,32 @@ export const projectLinks = {
 
 // Live demo URLs for each project category
 export const demoUrls = {
+  "odyssey": "https://odysseytravelapp.com/",
+  "Logistivo": "https://logistivo.com/en",
+  "Tradein": "https://www.tradeinupvc.com/",
+  "PoolStore": "https://poolstore.co.uk/",
+  "WordsCounter": "https://wordscounterforfree.netlify.app/",
+  "LittleMate": "https://thelittlemate.pk/",
+  "PromoGarlic": "https://www.promogarlic.com/",
+  
   // E-commerce Projects
-  'ai-ecommerce-platform': 'https://shopify-ai-demo.vercel.app',
-  'restaurant-management': 'https://restaurant-pos-demo.vercel.app',
-  
+  "ai-ecommerce-platform": "https://shopify-ai-demo.vercel.app",
+  "restaurant-management": "https://restaurant-pos-demo.vercel.app",
+
   // Healthcare Projects
-  'healthcare-management': 'https://healthtech-platform-demo.vercel.app',
-  
+  "healthcare-management": "https://healthtech-platform-demo.vercel.app",
+
   // Analytics Projects
-  'analytics-dashboard': 'https://analytics-dashboard-demo.vercel.app',
-  'social-media-analytics': 'https://social-analytics-demo.vercel.app',
-  
+  "analytics-dashboard": "https://analytics-dashboard-demo.vercel.app",
+  "social-media-analytics": "https://social-analytics-demo.vercel.app",
+
   // Fintech Projects
-  'fintech-mobile-app': 'https://fintech-mobile-demo.vercel.app',
-  'crypto-trading-platform': 'https://crypto-trading-demo.vercel.app',
-  
+  "fintech-mobile-app": "https://fintech-mobile-demo.vercel.app",
+  "crypto-trading-platform": "https://crypto-trading-demo.vercel.app",
+
   // Education Projects
-  'learning-management-system': 'https://lms-platform-demo.vercel.app',
-  'vr-training-platform': 'https://vr-training-demo.vercel.app'
+  "learning-management-system": "https://lms-platform-demo.vercel.app",
+  "vr-training-platform": "https://vr-training-demo.vercel.app"
 }
 
 // GitHub repository URLs
